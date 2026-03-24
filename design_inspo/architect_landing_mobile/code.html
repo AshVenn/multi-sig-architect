@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITECT | High-End Multisig Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#25a55a",
+              "primary": "#bfc7d2",
+              "on-secondary-fixed": "#00210c",
+              "tertiary-fixed-dim": "#e9c349",
+              "secondary-fixed-dim": "#66dd8b",
+              "surface-dim": "#111316",
+              "surface-variant": "#333538",
+              "surface-bright": "#37393d",
+              "tertiary": "#e9c349",
+              "inverse-surface": "#e2e2e6",
+              "secondary-fixed": "#83fba5",
+              "error": "#ffb4ab",
+              "outline": "#8e9195",
+              "primary-container": "#101820",
+              "surface-tint": "#bfc7d2",
+              "on-tertiary-fixed": "#241a00",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-primary-fixed": "#141c24",
+              "on-surface": "#e2e2e6",
+              "primary-fixed": "#dbe3ef",
+              "on-primary-container": "#79818c",
+              "inverse-on-surface": "#2f3034",
+              "outline-variant": "#44474b",
+              "on-primary": "#29313a",
+              "on-tertiary": "#3c2f00",
+              "error-container": "#93000a",
+              "on-secondary-container": "#003115",
+              "surface-container-high": "#282a2d",
+              "tertiary-fixed": "#ffe088",
+              "background": "#111316",
+              "tertiary-container": "#cca730",
+              "secondary": "#66dd8b",
+              "surface-container-lowest": "#0c0e11",
+              "on-background": "#e2e2e6",
+              "on-secondary-fixed-variant": "#005227",
+              "on-error-container": "#ffdad6",
+              "surface": "#111316",
+              "surface-container-highest": "#333538",
+              "inverse-primary": "#575f69",
+              "on-secondary": "#003919",
+              "on-primary-fixed-variant": "#3f4851",
+              "surface-container": "#1e2023",
+              "on-error": "#690005",
+              "surface-container-low": "#1a1c1f",
+              "primary-fixed-dim": "#bfc7d2",
+              "on-tertiary-container": "#4f3d00",
+              "on-surface-variant": "#c5c6cb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #bfc7d2 0%, #101820 100%);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background-color: rgba(40, 42, 45, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#111316]/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-headline font-black tracking-tighter text-[#e2e2e6]">ARCHITECT</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-primary scale-125">menu</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#c5c6cb] hover:text-[#e2e2e6] transition-colors font-inter text-sm" href="#">How it Works</a>
+<a class="text-[#c5c6cb] hover:text-[#e2e2e6] transition-colors font-inter text-sm" href="#">Features</a>
+<a class="text-[#bfc7d2] font-bold border-b-2 border-[#bfc7d2] pb-1 font-inter text-sm" href="#">Dashboard</a>
+<button class="editorial-gradient text-on-primary px-6 py-2 rounded-lg font-headline font-bold text-sm hover:scale-95 transition-all duration-200">Connect Wallet</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative px-6 pt-16 pb-24 overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 opacity-20 blur-3xl">
+<div class="w-[300px] h-[300px] bg-secondary rounded-full"></div>
+</div>
+<div class="max-w-md">
+<span class="inline-block font-label text-[10px] tracking-[0.2em] uppercase text-secondary mb-4 border-l-2 border-secondary pl-3">Institutional Grade</span>
+<h1 class="font-headline text-5xl font-extrabold tracking-tighter leading-none text-on-surface mb-6">
+                    The Ledger of <br/><span class="text-primary">Consensus</span>
+</h1>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-10">
+                    Architect redefined multisig management through clinical precision and architectural integrity.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="editorial-gradient py-5 px-8 rounded-lg text-on-primary font-headline font-extrabold flex justify-between items-center group">
+<span>Initiate Protocol</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest/30 border border-outline-variant/20 py-5 px-8 rounded-lg text-on-surface font-headline font-bold text-center">
+                        View Documentation
+                    </button>
+</div>
+</div>
+</section>
+<!-- Case Study Intro (Academic Project) -->
+<section class="bg-surface-container-low px-6 py-16">
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l border-t border-outline-variant/10 shadow-xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary">school</span>
+<h3 class="font-headline font-bold tracking-tight text-on-surface">Academic Thesis Showcase</h3>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-8">
+                    An advanced exploration into decentralized governance and structural security. Built by <span class="text-on-surface font-medium">Zouhairi Youness</span> and <span class="text-on-surface font-medium">Abdelkarim Moussaoui</span>.
+                </p>
+<div class="flex items-center gap-4 py-4 border-t border-outline-variant/20">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-primary-container">Tech Stack</p>
+<p class="text-xs font-body text-on-surface">Solidity / NextJS / Hardhat</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Step Visual Flow -->
+<section class="py-24 px-6 space-y-12">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-center mb-16">The Execution Lifecycle</h2>
+<!-- Step 1: Create -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 h-full w-[1px] bg-outline-variant/30"></div>
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-secondary"></div>
+<div class="mb-2">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">01. Architect</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-3">Create Proposal</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    Define intent within a high-stakes environment. Modular transaction builders ensure zero-error configurations.
+                </p>
+<div class="h-48 w-full bg-surface-container rounded-xl overflow-hidden relative border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Dark abstract geometric blockchain nodes rendering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1HPnSv-2zoeR9bQRo44Br1Zu7C6GDYm_tOLPWX_xf4MFp8s5oEMOxHQjAemyStKOXxKZDkx52JiladbeKKTZU5YqL4tUAqznPk15lxN6DzbjXPcgJ5xSFyavmfgD-WIiixvshkHY9yWvgJqaBD-LYh3dUqByQykhmOR8qEMTFtCd1EEGUoSPMZKN1orAIY9oyVQU94C7YfbfPsydktr8tGsLlg5djdaYAUPCCKd3YORd--ddxrImbf4gmIlxsHyMlDOoFO3b6h6U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+</div>
+<!-- Step 2: Collect -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 h-full w-[1px] bg-outline-variant/30"></div>
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-tertiary"></div>
+<div class="mb-2">
+<span class="font-label text-xs uppercase tracking-widest text-tertiary">02. Validate</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-3">Collect Consensus</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    Threshold-based cryptographic signatures. Each participant anchors the security of the whole.
+                </p>
+<div class="grid grid-cols-2 gap-2">
+<div class="h-24 bg-surface-container rounded-lg border border-outline-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="h-24 bg-surface-container rounded-lg border border-outline-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Step 3: Execute -->
+<div class="relative pl-12">
+<div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-primary"></div>
+<div class="mb-2">
+<span class="font-label text-xs uppercase tracking-widest text-primary">03. Finalize</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-3">Execute Protocol</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    Automatic settlement upon reaching threshold. The ledger updates with immutable finality.
+                </p>
+<div class="p-4 bg-secondary-container/10 border border-secondary-container/20 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+<span class="text-secondary font-headline font-bold text-xs uppercase tracking-widest">Transaction Confirmed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Architecture Features (Bento-ish Mobile Grid) -->
+<section class="bg-surface px-6 py-24 border-t border-outline-variant/10">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight mb-12">Built to Last</h2>
+<div class="flex flex-col gap-6">
+<!-- Large Feature Card -->
+<div class="bg-surface-container-high p-8 rounded-xl shadow-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-3xl mb-6">shield</span>
+<h3 class="font-headline text-xl font-bold mb-3">Multi-Sig Guard</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Advanced threshold security protocols ensuring that no single entity can compromise the treasury.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">analytics</span>
+<h4 class="font-headline font-bold mb-2">Audit Trails</h4>
+<p class="text-on-surface-variant text-xs leading-relaxed">Full historical transparency for every administrative interaction.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary mb-4">key</span>
+<h4 class="font-headline font-bold mb-2">Hardware Support</h4>
+<p class="text-on-surface-variant text-xs leading-relaxed">Native integration with Ledger and Trezor hardware devices.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-20 text-center">
+<div class="editorial-gradient rounded-2xl p-12 shadow-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-black text-on-primary mb-6">Ready to Architect?</h2>
+<button class="bg-on-primary text-primary-container px-10 py-4 rounded-lg font-headline font-black text-sm uppercase tracking-[0.1em] shadow-xl hover:scale-105 transition-transform">
+                        Launch App
+                    </button>
+</div>
+<!-- Abstract pattern overlay -->
+<div class="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #fff 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#111316] w-full py-12 border-t border-[#44474b]/20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="text-center md:text-left">
+<div class="text-lg font-manrope font-bold text-[#e2e2e6] mb-2">ARCHITECT</div>
+<p class="font-inter text-[10px] tracking-widest uppercase text-[#c5c6cb] max-w-[280px]">© 2024 Architect Ledger. Built by ZOUHAIRI Youness and MOUSSAOUI Abdelkarim.</p>
+</div>
+<div class="flex gap-6">
+<a class="font-inter text-xs tracking-widest uppercase text-[#c5c6cb] hover:text-[#66dd8b] transition-colors" href="#">Security Audit</a>
+<a class="font-inter text-xs tracking-widest uppercase text-[#c5c6cb] hover:text-[#66dd8b] transition-colors" href="#">Documentation</a>
+<a class="font-inter text-xs tracking-widest uppercase text-[#c5c6cb] hover:text-[#66dd8b] transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Floating Action for Mobile (Contextual: Create Transaction) -->
+<div class="fixed bottom-8 right-8 z-50 md:hidden">
+<button class="w-16 h-16 rounded-full editorial-gradient shadow-2xl flex items-center justify-center text-on-primary active:scale-90 transition-all">
+<span class="material-symbols-outlined scale-125" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>

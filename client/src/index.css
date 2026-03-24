@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:FILL@0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        background: #111316;
+    }
+
+    body {
+        @apply bg-background text-on-surface font-body;
+        min-height: 100vh;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(87, 95, 105, 0.14) 0px, transparent 48%),
+            radial-gradient(at 100% 0%, rgba(102, 221, 139, 0.07) 0px, transparent 42%),
+            radial-gradient(at 50% 100%, rgba(233, 195, 73, 0.04) 0px, transparent 40%);
+    }
+
+    #root {
+        min-height: 100vh;
+    }
+
+    ::selection {
+        background: rgba(191, 199, 210, 0.2);
+        color: #e2e2e6;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #111316;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #333538;
+        border-radius: 999px;
+    }
+}
+
+@layer components {
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        vertical-align: middle;
+        line-height: 1;
+    }
+
+    .mesh-gradient {
+        background-color: #111316;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(191, 199, 210, 0.16) 0px, transparent 45%),
+            radial-gradient(at 100% 0%, rgba(102, 221, 139, 0.06) 0px, transparent 38%),
+            radial-gradient(at 50% 80%, rgba(233, 195, 73, 0.03) 0px, transparent 36%);
+    }
+
+    .editorial-gradient {
+        background: linear-gradient(135deg, #dbe3ef 0%, #101820 100%);
+    }
+
+    .metallic-text {
+        background: linear-gradient(135deg, #e2e2e6 0%, #79818c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .glass-panel {
+        background: rgba(30, 32, 35, 0.78);
+        backdrop-filter: blur(20px);
+    }
+
+    .noise-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.04;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.32) 1px, transparent 0);
+        background-size: 24px 24px;
+    }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITECT | The Ledger of Consensus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#4f3d00",
+              "on-primary": "#29313a",
+              "secondary-container": "#25a55a",
+              "on-tertiary-fixed-variant": "#574500",
+              "primary": "#bfc7d2",
+              "inverse-on-surface": "#2f3034",
+              "inverse-surface": "#e2e2e6",
+              "surface-dim": "#111316",
+              "secondary": "#66dd8b",
+              "on-surface": "#e2e2e6",
+              "surface-container": "#1e2023",
+              "primary-fixed-dim": "#bfc7d2",
+              "tertiary-fixed": "#ffe088",
+              "secondary-fixed": "#83fba5",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#00210c",
+              "surface": "#111316",
+              "surface-tint": "#bfc7d2",
+              "on-secondary-fixed-variant": "#005227",
+              "surface-container-lowest": "#0c0e11",
+              "on-primary-fixed-variant": "#3f4851",
+              "inverse-primary": "#575f69",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#44474b",
+              "primary-fixed": "#dbe3ef",
+              "tertiary": "#e9c349",
+              "on-tertiary": "#3c2f00",
+              "on-tertiary-fixed": "#241a00",
+              "on-secondary": "#003919",
+              "on-primary-container": "#79818c",
+              "tertiary-container": "#cca730",
+              "on-primary-fixed": "#141c24",
+              "primary-container": "#101820",
+              "error": "#ffb4ab",
+              "surface-container-high": "#282a2d",
+              "on-background": "#e2e2e6",
+              "surface-container-low": "#1a1c1f",
+              "on-surface-variant": "#c5c6cb",
+              "on-secondary-container": "#003115",
+              "background": "#111316",
+              "surface-variant": "#333538",
+              "outline": "#8e9195",
+              "secondary-fixed-dim": "#66dd8b",
+              "tertiary-fixed-dim": "#e9c349",
+              "surface-bright": "#37393d",
+              "surface-container-highest": "#333538",
+              "on-error": "#690005"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mesh-gradient {
+            background-color: #111316;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(215, 14%, 34%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(142, 69%, 63%, 0.05) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, hsla(45, 81%, 60%, 0.02) 0px, transparent 50%);
+        }
+        .text-metallic {
+            background: linear-gradient(135deg, #bfc7d2 0%, #79818c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#111316]/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20"><div class="absolute left-1/2 -translate-x-1/2 top-0"><span class="bg-primary/10 text-primary text-[9px] px-3 py-1 rounded-b border-x border-b border-primary/20 font-bold tracking-widest uppercase">Academic Project Showcase</span></div>
+<div class="text-xl font-manrope font-black tracking-tighter text-[#e2e2e6]">ARCHITECT</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-[#c5c6cb] hover:text-[#e2e2e6] transition-colors font-inter text-sm" href="#">How it Works</a>
+<a class="text-[#c5c6cb] hover:text-[#e2e2e6] transition-colors font-inter text-sm" href="#">Features</a>
+<a class="text-[#c5c6cb] hover:text-[#e2e2e6] transition-colors font-inter text-sm" href="#">Dashboard</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-manrope font-bold px-6 py-2.5 rounded hover:scale-95 transition-all duration-200 active:scale-90">Connect Wallet <span class="block text-[8px] opacity-70 font-normal">Demo View</span></button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center px-8 mesh-gradient overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none" data-alt="Subtle 3D geometric mesh pattern background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDOG4X0vQtqmwh7SRdS3Kllcu0nsyrD_rfpM2IOyNHqKlQosAQI7blXNhkNpk728suMw-KeB86tr4AgGGNSxwMeNaiFy949T7RfloovKGkhKxvTb7Rzx5qrlhozVnZ667uFh3ZIXhU19vrlf5oEiYdVUfpWXl5ZzCv-jpIoUXj_8LyP2a5DJenFXIB_lyTApjzFZGbKN7Ra74OQY0hppuB26PlqiPRTzg39KxRJk9lrCxdjnAjntybie-5fkmAmmEzIWfztvb62vA');"></div>
+<div class="max-w-5xl text-center z-10">
+<div class="inline-flex items-center px-3 py-1 mb-8 rounded-full bg-secondary-container/10 border border-secondary/20">
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Institutional Grade</span>
+</div>
+<h1 class="font-headline font-extrabold text-6xl md:text-8xl tracking-tighter text-on-surface mb-8 leading-[0.9]">
+                    The Ledger of <br/>
+<span class="text-metallic">Consensus.</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">An academic multisignature ETH wallet concept by <b>Zouhairi Youness</b> and <b>Abdelkarim Moussaoui</b>. Architect explores high-end security frameworks through a clinical, institutional design lens.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="w-full md:w-auto px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-transform">
+                        Launch Vault
+                    </button>
+<button class="w-full md:w-auto px-8 py-4 bg-surface-container-highest/40 backdrop-blur-md border border-outline-variant/20 text-on-surface font-bold rounded-lg hover:bg-surface-container-highest transition-colors">
+                        View Documentation
+                    </button>
+</div><p class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest mt-4 font-bold">Note: All primary actions navigate to the conceptual dashboard view</p>
+</div>
+<!-- Dashboard Preview -->
+<div class="mt-24 max-w-6xl w-full mx-auto relative px-4">
+<div class="rounded-t-xl bg-surface-container-low p-2 border-t border-x border-outline-variant/20 shadow-2xl">
+<div class="bg-surface-container rounded-lg overflow-hidden relative group">
+<img alt="Dashboard Preview" class="w-full h-auto opacity-40 blur-sm group-hover:blur-none transition-all duration-700" data-alt="Modern dark mode crypto dashboard interface layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV7AX24IS43leVsHmzpnioOHA7JMQyiAQIeFKZRY1-y7-LeiTWrdigEZL_-WTu4hhZNR4_ZTuxvtrmICnmHGWpshoz81bpXKdqhC-hMAUvF4cRDRGVikRqsrIhyjWy3C75Mao4tSXyTHXnJsP_amfNPCYEoBLhmVJYPl__6eonnpVXz1pyW3I1Ni_rHdZha9uB40Ztt2o2OsRoVFjAdkv2vqKOVfqv2HdrWbBvIgWYPaEKyuAEj7dyh0l9zNav60ph9sXtBGTUy28"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface/80 backdrop-blur-xl border border-outline-variant/30 px-6 py-4 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">lock_open</span>
+<span class="font-headline font-bold text-on-surface">Experience the Architect Dashboard</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works: Editorial Flow -->
+<section class="py-32 max-w-7xl mx-auto px-8 bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-4 sticky top-32">
+<h2 class="font-headline font-bold text-4xl text-on-surface tracking-tight mb-6">Case Study: Authority.</h2>
+<p class="text-on-surface-variant leading-relaxed">Architect is a student-led exploration into simplifying complex multi-signature workflows, translating technical ETH security into a clinical, intuitive sequence.</p>
+<div class="mt-12 h-px bg-gradient-to-r from-outline-variant/40 to-transparent"></div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Step 1 -->
+<div class="bg-surface-container p-10 rounded-xl relative group overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="text-9xl font-headline font-black">01</span>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">account_balance_wallet</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Create Transfer</h3>
+<p class="text-on-surface-variant max-w-md">Initiate an asset transfer with precise metadata. Specify destinations, gas limits, and execution windows within seconds.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-high p-10 rounded-xl relative group border-l-4 border-secondary/50">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="text-9xl font-headline font-black">02</span>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">groups</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Collect Approvals</h3>
+<p class="text-on-surface-variant max-w-md mb-8">Broadcast approval requests to designated signers. Monitor quorum status in real-time with granular tracking.</p>
+<!-- Animated Progress Bar Visual -->
+<div class="w-full max-w-sm bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[66%]" style="box-shadow: 0 0 12px rgba(102, 221, 139, 0.4)"></div>
+</div>
+<div class="flex justify-between mt-3 max-w-sm">
+<span class="text-[10px] font-label font-bold uppercase tracking-widest text-secondary">2 of 3 Confirmed</span>
+<span class="text-[10px] font-label font-bold uppercase tracking-widest text-on-surface-variant">Pending Signature</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container p-10 rounded-xl relative group overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="text-9xl font-headline font-black">03</span>
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">task_alt</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Execute</h3>
+<p class="text-on-surface-variant max-w-md">Once consensus is reached, the transaction is automatically finalized or made available for execution by any authorized party.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-headline font-bold text-4xl text-on-surface mb-4">Core Architecture</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">This project explores the intersection of signatures and organizational governance, providing a theoretical foundation for secure ETH management.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="md:col-span-2 bg-surface-container p-12 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-colors group">
+<span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block w-fit">shield</span>
+<h3 class="font-headline font-bold text-3xl text-on-surface mb-6">Institutional Security</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">Our multisig engine is audited by leading firms, utilizing battle-tested smart contracts that have secured billions in TVL.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-sm font-label text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+                                Formal Verification
+                            </li>
+<li class="flex items-center gap-3 text-sm font-label text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+                                Hardware Wallet Native
+                            </li>
+</ul>
+</div>
+<!-- Feature 2 -->
+<div class="bg-gradient-to-br from-tertiary-container/20 to-surface-container p-12 rounded-2xl border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary text-5xl mb-8" data-weight="fill">visibility</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-6">Complete Transparency</h3>
+<p class="text-on-surface-variant leading-relaxed">Full audit trails for every decision. Know who signed, when they signed, and the exact state of your treasury at all times.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-highest p-12 rounded-2xl border border-outline-variant/10 group">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8 group-hover:rotate-12 transition-transform block w-fit">settings_input_component</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-6">Programmable Custody</h3>
+<p class="text-on-surface-variant leading-relaxed mb-10">Define custom logic for withdrawals. Set daily limits, time-locks, and conditional approval workflows.</p>
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/20 font-mono text-[10px] text-tertiary/70">
+                            { "threshold": "2/3", "lock_duration": "48h", "limit": "50k" }
+                        </div>
+</div>
+<!-- Feature 4 -->
+<div class="md:col-span-2 bg-surface-container-low p-12 rounded-2xl border border-outline-variant/10 overflow-hidden relative">
+<div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1">
+<h3 class="font-headline font-bold text-3xl text-on-surface mb-6">Interoperable Core</h3>
+<p class="text-on-surface-variant text-lg">Architect connects seamlessly with leading DeFi protocols, allowing you to stake, swap, and yield-farm directly from your multisig vault.</p>
+</div>
+<div class="flex-none flex gap-4">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary">token</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary">database</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-tertiary">hub</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full translate-x-1/2 translate-y-1/2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-surface text-center">
+<div class="max-w-3xl mx-auto px-8">
+<h2 class="font-headline font-extrabold text-5xl text-on-surface mb-8 tracking-tighter">Ready to secure your legacy?</h2>
+<p class="text-on-surface-variant text-xl mb-12">Join the next generation of treasury management. Deploy your Architect vault today.</p>
+<button class="px-12 py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-manrope font-black text-lg rounded shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                    Get Started Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#111316] border-t border-[#44474b]/20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-manrope font-bold text-[#e2e2e6]">ARCHITECT</div>
+<p class="text-[#c5c6cb] font-inter text-xs tracking-widest uppercase">© 2024 Architect Ledger. Built by ZOUHAIRI Youness and MOUSSAOUI Abdelkarim.</p>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-[#c5c6cb] font-inter text-xs tracking-widest uppercase hover:text-[#66dd8b] transition-colors" href="#">Security Audit</a>
+<a class="text-[#c5c6cb] font-inter text-xs tracking-widest uppercase hover:text-[#66dd8b] transition-colors" href="#">Documentation</a>
+<a class="text-[#c5c6cb] font-inter text-xs tracking-widest uppercase hover:text-[#66dd8b] transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
